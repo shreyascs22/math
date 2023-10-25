@@ -3,46 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>MATH</title>
 </head>
-<body>
-  <h1>CALCULATOR</h1>
-  <table>
+<body class="bg-black text-yellow-500">
+  <h1 class="text-4xl flex items-center justify-center">CALCULATOR</h1>
+  <table class="h-screen flex items-center justify-center">
     <tr>
-      <td colspan="5"><input id="output" type="text" readonly></td>
+      <td colspan="5"><input class="text-xl w-96 h-12 bg-black text-white font-bold p-2 rounded-3xl border-4 border border-white" id="output" type="text" readonly></td>
     </tr>
-    <tr>
-      <td><button class="clear" id="clrbutton">Clr</button></td>
-      <td><button class="calcterms" value="(">(</button></td>
-      <td><button class="calcterms" value=")">)</button></td>
-      <td><button class="calcterms" value="÷">÷</button></td>
-      <td><button class="calcterms" value="&#9003;">&#9003;</button></td>
+    <tr class="text-2xl font-bold text-center">
+      <td class="p-1 pt-4"><button class="clear text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-pink-950 border border-solid border-red-600 p-2" id="clrbutton">C</button></td>
+      <td class="p-1 pt-4"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="(">(</button></td>
+      <td class="p-1 pt-4"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value=")">)</button></td>
+      <td class="p-1 pt-4"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="÷">÷</button></td>
+      <td class="p-1 pt-4"><button class="backspace text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" id="bkspacebutton">&#9003;</button></td>
     </tr>
-    <tr>
-      <td><button class="calcterms" value="7">7</button></td>
-      <td><button class="calcterms" value="8">8</button></td>
-      <td><button class="calcterms" value="9">9</button></td>
-      <td><button class="calcterms" value="x">x</button></td>
-      <td rowspan="4"><button class="equals" id="equalsbutton">=</button></td>
+    <tr class="text-2xl font-bold text-center">
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="7">7</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="8">8</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="9">9</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="x">x</button></td>
+      <td rowspan="4" class="p-1"><button class="equals text-3xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out pt-36 pb-48" id="equalsbutton">=</button></td>
     </tr>
-    <tr>
-      <td><button class="calcterms" value="4">4</button></td>
-      <td><button class="calcterms" value="5">5</button></td>
-      <td><button class="calcterms" value="6">6</button></td>
-      <td><button class="calcterms" value="-">-</button></td>
+    <tr class="text-2xl font-bold text-center">
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="4">4</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="5">5</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="6">6</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="-">-</button></td>
 
     </tr>
-    <tr>
-      <td><button class="calcterms" value="1">1</button></td>
-      <td><button class="calcterms" value="2">2</button></td>
-      <td><button class="calcterms" value="3">3</button></td>
-      <td><button class="calcterms" value="+">+</button></td>
+    <tr class="text-2xl font-bold text-center">
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="1">1</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="2">2</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="3">3</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="+">+</button></td>
     </tr>
-    <tr>
-      <td><button class="calcterms" value="%">%</button></td>
-      <td><button class="calcterms" value="0">0</button></td>
-      <td><button class="calcterms" value=".">.</button></td>
-      <td><button class="calcterms" value="^">^</button></td>
+    <tr class="text-2xl font-bold text-center">
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="%">%</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-slate-800 border border-solid border-blue-800 p-2 active:border-0 transition-all ease-in-out" value="0">0</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value=".">.</button></td>
+      <td class="p-1"><button class="calcterms text-xl-center w-14 font-extrabold h-14 rounded-full border-4 hover:bg-teal-950 border border-solid border-green-700 p-2 active:border-0 transition-all ease-in-out" value="^">^</button></td>
     </tr>
     
   </table>
